@@ -177,6 +177,11 @@ body {
   margin: 0 var(--space-sm);
 }
 
+img {
+    max-width: 70%;
+    height: auto;
+  }
+
 /* Featured Image */
 .featured-image {
   margin: var(--space-2xl) 0 var(--space-3xl);
