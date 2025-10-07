@@ -29,6 +29,12 @@
       --breakpoint-lg: 1024px;
     }
     
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
       body {
       font-family: var(--font-body);
       font-weight: 400;
@@ -44,3 +50,127 @@
       color: var(--color-secondary);
       margin-bottom: 1rem;
     }
+
+  /* DEFAULT LAYOUT */
+main {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+section {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+  /* TWO COLUMN LAYOUT */
+main.two-column {
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  gap: 2rem;
+  max-width: 80vw; 
+  }
+
+main.two-column section {
+  margin-bottom: 0;
+}
+main.three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 80vw;
+}
+
+  /* THREE COLUMN LAYOUT */
+main.three-column section {
+  margin-bottom: 0;
+}
+
+main.three-column h1,
+main.three-column h2,
+main.three-column h3 {
+  color: var(--color-secondary);
+}
+
+/* === MEDIUM STYLE LAYOUT === */
+main.medium-style {
+  display: block;
+  padding: 3rem 2rem;
+}
+
+main.medium-style section {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+body:has(main.medium-style) {
+  background-color: white;
+  line-height: 1.8;
+  color: var(--gray-900);
+}
+
+main.medium-style p {
+  line-height: 1.8;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+main.medium-style h1 {
+  font-size: 2.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+main.medium-style h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+main.medium-style img {
+  margin: 2rem 0;
+}
+
+  /* PHOTO GRID LAYOUT */
+main.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+main.photo-grid .photo-item {
+  background-color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+main.photo-grid .photo-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 0 1rem 0;
+}
+
+main.photo-grid .photo-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+main.photo-grid .photo-caption {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+img {
+  max-width: 100%; /* Ensures image stays within container width */
+}
