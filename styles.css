@@ -172,54 +172,74 @@ main.photo-grid .photo-caption {
 }
 
 /* full width image */
-  main.full-width {
-    width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
+body {
     margin: 0;
-  }
+    padding: 0;
+}
+.full-width {
+  width: 100%;
+  height: 60vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
 
-  main.full-width-image {
+.full-width-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-area: 1 / 1;
+  display: block;
+  margin: 0;
+}
+
+.full-width-overlay {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
     grid-area: 1 / 1;
-    display: block;
+  }
+
+.full-width-content {
+  grid-area: 1 / 1;
+  max-width: 900px;
+  padding: 2rem;
+  text-align: center;
+  align-self: start; /* make it anchor to the top of the section */
+  transform: translateY(60%); /* adjust how far down it sits */
+}
+
+.full-width-content h1 {
+    color: white;
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+.full-width-content p {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     margin: 0;
   }
 
-  main.full-width-overlay {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-      grid-area: 1 / 1;
-    }
+/* small body copy */
+.description {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
 
-  main.full-width-content {
-      grid-area: 1 / 1;
-      max-width: 900px;
-      padding: 2rem;
-      text-align: center;
-    }
-
-  main.full-width-content h1 {
-      color: white;
-      font-size: 4.5rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      margin-bottom: 1.5rem;
-      line-height: 1.1;
-    }
-
-  main.full-width-content p {
-      color: white;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-      margin: 0;
-    }
+.description p + p {
+  margin-top: 1.5rem;
+}
 
 img {
   max-width: 100%; /* Ensures image stays within container width */
