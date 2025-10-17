@@ -171,6 +171,66 @@ main.photo-grid .photo-caption {
   margin: 0;
 }
 
+/* full width image */
+  main.full-width {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+
+  main.full-width-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1;
+    display: block;
+    margin: 0;
+  }
+
+  main.full-width-overlay {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+      grid-area: 1 / 1;
+    }
+
+  main.full-width-content {
+      grid-area: 1 / 1;
+      max-width: 900px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+  main.full-width-content h1 {
+      color: white;
+      font-size: 4.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+  main.full-width-content p {
+      color: white;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      margin: 0;
+    }
+
 img {
   max-width: 100%; /* Ensures image stays within container width */
+}
+
+/* for scroll */
+
+.scroll-container {
+  scroll-snap-type: x mandatory;
+}
+
+.frame {
+  scroll-snap-align: start;
 }
