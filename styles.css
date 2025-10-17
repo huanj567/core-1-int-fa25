@@ -244,13 +244,3 @@ body {
 img {
   max-width: 100%; /* Ensures image stays within container width */
 }
-
-/* for scroll */
-
-.scroll-container {
-  scroll-snap-type: x mandatory;
-}
-
-.frame {
-  scroll-snap-align: start;
-}

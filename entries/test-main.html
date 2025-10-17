@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <title>NYC Streetview</title>
+      
+        <style>
+        body {
+            margin: 0;
+            background: #111;
+        }
+
+        /* Scroll area */
+        .scroll-container {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: auto;             /* horizontal scroll enabled */
+            overflow-y: hidden;
+            white-space: nowrap;          /* keep images in one row */
+            scroll-behavior: smooth;      /* smooth scrolling */
+        }
+
+        /* Image frames */
+        .scroll-container img {
+            height: 100vh;                /* make each frame full height of viewport */
+            width: auto;                  /* maintain aspect ratio */
+            display: inline-block;
+        }
+
+        /* Image strip styling */
+        .scroll-container img {
+            height: 100vh;          /* each frame fills the viewport height */
+            width: auto;            /* keep proportions */
+            display: inline-block;  /* lay images horizontally */
+        }
+
+        /* Optional: remove scroll bar for cleaner look */
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="scroll-container">
+        <img src="../images/random_streetview.webp" alt="Frame 1">
+        <img src="../images/more_streetview.jpg" alt="Frame 2">
+        <img src="../images/random_streetview.webp" alt="Frame 3">
+        </div>
+
+    </body>
+
+    </html>
