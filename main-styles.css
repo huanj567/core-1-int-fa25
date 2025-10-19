@@ -31,10 +31,38 @@
 
 /* for scroll */
 
-.scroll-container {
-  scroll-snap-type: x mandatory;
+/* Remove default page spacing */
+body {
+  margin: 0;
+  background: #111;        /* dark background (optional) */
+  overflow-x: hidden;       /* prevent horizontal scrollbar */
 }
 
-.frame {
-  scroll-snap-align: start;
+/* Sticky wrapper keeps the horizontal scroll fixed during vertical scroll */
+.scroll-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;           /* fills the entire viewport */
+  overflow: hidden;         /* hides overflow to keep visuals clean */
+}
+
+/* The horizontally moving strip */
+.horizontal-scroll {
+  display: flex;
+  height: 100vh;
+  will-change: transform;   /* improves performance for animation */
+  transition: transform 0.05s linear; /* smooths small jumps */
+}
+
+/* Each image */
+.horizontal-scroll img {
+  height: 100vh;            /* make images fill viewport height */
+  width: auto;              /* preserve aspect ratio */
+  flex-shrink: 0;           /* prevent images from shrinking */
+  object-fit: cover;        /* optional: crop nicely if aspect ratios differ */
+}
+
+/* Optional: hide scrollbar (for cleaner presentation) */
+::-webkit-scrollbar {
+  display: none;
 }
