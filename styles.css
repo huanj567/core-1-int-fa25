@@ -75,6 +75,7 @@ main.two-column {
 main.two-column section {
   margin-bottom: 0;
 }
+
 main.three-column {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
